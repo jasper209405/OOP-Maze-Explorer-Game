@@ -15,4 +15,5 @@ Empty::Empty() : Block(){
 
 void Empty::player_touched() {
     //write by yourself
+    cout << "Player moved to an empty space!!!";
 }

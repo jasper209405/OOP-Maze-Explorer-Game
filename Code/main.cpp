@@ -17,18 +17,27 @@ int main(int argc, char** argv){
         
         //Write your own code to generate the keys, obstacle, and ...
 
+        //maze->initializeGameElements();  // You should implement this method in the Maze class
+
         maze->printMaze(player);
 
-        while(true) {   //Condition for ending the game of this level. Write your own function to replace "true"
-            char direction = player->get_direction();
-            cout << "Main->direction = " << direction << endl;
+        bool levelComplete = false;
+        while (!levelComplete) {
+            char direction = player->get_direction();  // Ensure this method captures user input
+            cout << "Main -> direction: " << direction << endl;
 
+            if (direction == 'Q' || direction == 'q') {  // Allow quitting the game
+                levelComplete = true;
+                continue;
+            }
 
-            //Codes for the player touching different types of block. Use the function player_touched() to implement
-
+            // Player interacts with the current block
             player->move(direction, maze);
 
             maze->printMaze(player);
+            
+            // Check for level completion
+            //levelComplete = playertouched();  // Implement this logic in Maze class
         }
 
         delete maze;

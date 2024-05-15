@@ -27,4 +27,7 @@ public:
     virtual void player_touched() = 0;  //pure virtual function.  Codes for the block is touched by the player.
 };
 
+
+
+
 #endif

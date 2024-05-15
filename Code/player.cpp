@@ -41,6 +41,7 @@ void Player::move(char direction, const Maze* maze){
 }
 
 void Player::change_symbol(){
+    
     //write by yourself
 }
 

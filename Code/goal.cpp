@@ -14,5 +14,6 @@ Goal::Goal() : Block(){
 }
 
 void Goal::player_touched() {
+    cout << "Goal!!!!!";
     //write by yourself
 }
